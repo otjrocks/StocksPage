@@ -1,0 +1,31 @@
+<!-- TradingView Widget BEGIN -->
+<div class='tradingview-widget-container'>
+  <div id='tradingview_ce399'></div>
+  <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+  <script>
+    var ticker = location.hash.replace(/#/, "");
+    console.log('Sending chart for ' + ticker);
+  </script>
+  <script type='text/javascript'>
+  new TradingView.widget(
+  {
+  'autosize': true,
+  'symbol': ticker,
+  'interval': '1',
+  'timezone': 'America/New_York',
+  'theme': 'Light',
+  'style': '1',
+  'locale': 'en',
+  'toolbar_bg': '#f1f3f6',
+  'enable_publishing': false,
+  'hide_legend': true,
+  'save_image': false,
+  "news": [
+    "headlines"
+  ],
+  'container_id': 'tradingview_ce399'
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->

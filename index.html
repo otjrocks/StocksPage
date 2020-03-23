@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stock Info</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="theme.css" rel="stylesheet">
+  <!-- custom theme by: themestr.app -->
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+
+  <!-- Sidebar -->
+  <div style="margin-top:50px;" class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">Stock Watchlist<br><a href="" style="padding-left: 15px;"onclick="clearList()">Clear list</a></div>
+    <div id="watchlist" class="list-group list-group-flush">
+    </div>
+  </div>
+
+<div id="page-content-wrapper">
+  <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">Live Stock Info</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a id="menu-toggle" class="nav-link" href="#">Show/Hide Watchlist</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </header>
+
+        <main role="main" class="container">
+        <h1 class="mt-5">Stocks Homepage</h1>
+        <p class="lead">Enter a stock symbol in the text box below to read more information. Make sure you enter in a valid ticker.<br>
+        <div class="form-inline mt-2 mt-md-0">
+          <input id="searchText" class="form-control mr-sm-2" type="text" placeholder="Enter a symbol..." aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" onclick="buttonClick()">Search</button>
+        </div>
+        <p><code>Example: AAPL (Apple)</code>.</p>
+        <br>
+      </main>
+
+  <div id="root"></div>
+
+</div>
+</div>
+
+
+<footer class="page-footer pt-4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <h5 class="text-uppercase">Stock Information</h5>
+        <p>Live realtime stock information provided by <a target="_blank" href="https://www.alphavantage.co/">alphavantage.co</a>. Charts provided by <a target="-_blank"  href="https://www.tradingview.com/">tradingview.com</a>. Charts may be delayed by 20 minutes.</p>
+      </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+    </div>
+  </div>
+
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="#"> Owen Jennings</a>
+  </div>
+</footer>
+
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+</script>
+  </body>
+
+</html>
